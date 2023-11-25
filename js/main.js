@@ -17,6 +17,38 @@ let btns =document.getElementById('btns');
 let body =document.getElementById('body');
 
 
+// Saving the code to localStorage when user stops typing
+     let timeoutIdHtml;
+     let timeoutIdCss;
+     let timeoutIdJs;
+
+function saveToLocalHtml(){
+      clearTimeout(timeoutIdHtml);
+       timeoutIdHtml = setTimeout(() => {
+         localStorage.setItem('autosave_code-html', codeHtml.value);
+       }, 1000); 
+}
+function saveToLocalCss(){
+      clearTimeout(timeoutIdCss);
+       timeoutIdCss = setTimeout(() => {
+         localStorage.setItem('autosave_code-css', codeCss.value);
+       }, 1000); 
+}
+function saveToLocalJs(){
+      clearTimeout(timeoutIdJs);
+       timeoutIdJs = setTimeout(() => {
+         localStorage.setItem('autosave_code-js', codeJs.value);
+       }, 1000); 
+}
+
+    window.addEventListener('load', () => {
+      codeHtml.value =localStorage.getItem('autosave_code-html')|| "<div>\n\n</div>";
+      codeCss.value =localStorage.getItem('autosave_code-css') || "<style>\n\n</style>";
+      codeJs.value =localStorage.getItem('autosave_code-js')|| "<script>\n\n</script>";
+
+     });
+
+
 function show(id){
 
     outerOne.style.display='none';
