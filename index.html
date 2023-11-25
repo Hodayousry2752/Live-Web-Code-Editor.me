@@ -49,17 +49,17 @@
                 <div class=" all-areas px-3">
                     <div id='outer-one' class="outer-div outer-one ">
                         <div class="inner-div ">
-                            <textarea id='code-html' spellcheck="false" oninput="resultOfCode()" class="code-input rounded"></textarea>
+                            <textarea id='code-html' spellcheck="false" oninput="resultOfCode();saveToLocalHtml()" class="code-input rounded"></textarea>
                         </div>
                     </div>
                     <div id="outer-two" class="outer-div outer-two ">
                         <div class="inner-div">
-                            <textarea id='code-css' spellcheck="false" oninput="resultOfCode()" class="code-input rounded">css</textarea>
+                            <textarea id='code-css' spellcheck="false" oninput="resultOfCode();saveToLocalCss()" class="code-input rounded">css</textarea>
                         </div>
                     </div>
                     <div id="outer-three" class="outer-div outer-three ">
                         <div class="inner-div">
-                            <textarea id='code-js' spellcheck="false" oninput="resultOfCode()" class="code-input rounded">js</textarea>
+                            <textarea id='code-js' spellcheck="false" oninput="resultOfCode();saveToLocalJs()" class="code-input rounded">js</textarea>
                         </div>
                     </div>
                 </div>
